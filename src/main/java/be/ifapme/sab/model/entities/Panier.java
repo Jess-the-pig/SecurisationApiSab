@@ -31,8 +31,6 @@ public class Panier {
     @Column(name = "status", nullable = false)
     private Integer status;
 
-    @Column(name = "article", nullable = false)
-    private Article article;
 
 
 
