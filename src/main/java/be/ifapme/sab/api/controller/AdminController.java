@@ -13,6 +13,11 @@ public class AdminController {
 
     }
 
+    @PostMapping("/console")
+    public String console(){
+        return "Vers consoleH2";
+    }
+
 /*
     @GetMapping("")
     public ClientDTO getAllClients(){

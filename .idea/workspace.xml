@@ -5,38 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/DBUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/DBUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/ArticleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Panier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/AdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/CommandeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/CommandeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/PanierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/PanierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AuthentificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AuthentificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/demo.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/demo.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/AristoteApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/AristoteApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/ArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/CustomAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/CustomAuthenticationSuccessHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Commande.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Panier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Panier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Panier_article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Panier_article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/AdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/AdminRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/ArticleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/ClientRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/CommandeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/CommandeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/PanierRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/PanierRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/demo.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/demo.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,19 +49,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AristoteApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;security&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jessicazawistowska/Desktop/Travail SAB/sab&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AristoteApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "security",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jessicazawistowska/Desktop/Travail SAB/sab",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

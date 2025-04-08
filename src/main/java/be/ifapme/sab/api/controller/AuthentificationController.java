@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthentificationController {
 
-    @GetMapping("/")
+    @GetMapping("/user")
     public String home(){
-        return "Hello home";
+        return "Welcome user";
     }
 
-    @GetMapping("/secure")
+    @GetMapping("/admin")
     public String secured(){
-        return "Hello secured";
+        return "Welcome Admin";
     }
 }
