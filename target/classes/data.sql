@@ -1,10 +1,2 @@
-DROP TABLE IF EXISTS dbuser;
-
-CREATE TABLE dbuser (
-  id INT AUTO_INCREMENT  PRIMARY KEY,
-  username VARCHAR(250) NOT NULL,
-  password VARCHAR(250) NOT NULL,
-  role VARCHAR(250) NOT NULL
-);
-INSERT INTO dbuser (username, password, role) VALUES ('dbuser', '$2y$10$.qkbukzzX21D.bqbI.B2R.tvWP90o/Y16QRWVLodw51BHft7ZWbc.', 'USER'),
-('dbadmin', '$2y$10$kp1V7UYDEWn17WSK16UcmOnFd1mPFVF6UkLrOOCGtf24HOYt8p1iC', 'ADMIN');
+-- admin/admin calculated by https://bcrypt-generator.com/
+INSERT INTO PERSON (USERNAME, PASSWORD_HASH, ROLE) VALUES ('admin', '$2a$12$fxqB1ntEEWw4PPlz3kYzdeYYC5QawyrlIAEPvK2jQaz5Edmys8qX6', 'ADMIN');
