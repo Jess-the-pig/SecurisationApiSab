@@ -1,12 +1,8 @@
 package be.ifapme.sab.config.security;
 
 import be.ifapme.sab.model.entities.UserRole;
-import liquibase.integration.spring.SpringLiquibase;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.task.TaskExecutor;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -18,7 +14,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import javax.sql.DataSource;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
@@ -39,6 +34,12 @@ public class SpringSecurityConfig {
                             .requestMatchers(antMatcher(HttpMethod.POST, "/persons")).hasRole(UserRole.ADMIN.name())
                             .anyRequest().authenticated();
                 })
+                .oauth2Login(oauth2 -> oauth2
+                        .defaultSuccessUrl("/users", true) // Redirection après connexion réussie
+                )
+                .formLogin(form -> form
+                        .defaultSuccessUrl("/secure", true) // Redirection aussi pour login formulaire
+                )
                 .headers(h -> h.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)) // This so embedded frames in h2-console are working
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

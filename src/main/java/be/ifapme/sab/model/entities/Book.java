@@ -6,9 +6,32 @@ import jakarta.persistence.*;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
+
     @Column(nullable = false)
     private String title;
+
+    @Column(nullable = false)
+    private Long isbn;
+
+    @Column(nullable = false)
+    private String description;
+
+    @Column(nullable = false)
+    private String photo;
+
+    @Column(nullable = false)
+    private Float price;
+
+    @Column(nullable = false)
+    private Long quantity;
+
+    @Column(nullable = false)
+    private Long category_id;
+
+
+
 
     public Long getId() {
         return id;
@@ -21,6 +44,12 @@ public class Book {
     public String getTitle() {
         return title;
     }
+
+    public Long getIsbn(){return isbn}
+
+    
+
+
 
     public void setTitle(String title) {
         this.title = title;
