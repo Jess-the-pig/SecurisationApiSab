@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/http/store.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/changelog/db/003-create-book-table.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/changelog/db/004-create-category-table.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/changelog/db/005-insert-categories-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/changelog/db/001-create-preson-table.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/changelog/db/001-create-person-table.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/changelog/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/changelog/master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/BookInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/BookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/changelog/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/changelog/master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
