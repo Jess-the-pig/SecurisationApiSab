@@ -1,9 +1,13 @@
 package be.ifapme.sab.api.controller;
 
-import be.ifapme.sab.api.DTO.BookInput;
+import be.ifapme.sab.api.DTO.BookRequest;
+import be.ifapme.sab.api.DTO.BookResponse;
 import be.ifapme.sab.model.entities.Book;
 import be.ifapme.sab.repository.BookRepository;
+import be.ifapme.sab.service.BookService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,9 +18,12 @@ import java.util.Optional;
 @RestController
 public class BookController {
     private final BookRepository bookRepository;
+    private final BookService bookService;
 
-    public BookController(BookRepository bookRepository) {
+
+    public BookController(BookRepository bookRepository, BookService bookService) {
         this.bookRepository = bookRepository;
+        this.bookService = bookService;
     }
 
     @GetMapping(path = "/books")
@@ -37,10 +44,7 @@ public class BookController {
     @PostMapping(path = "/books")
     @ResponseStatus(HttpStatus.CREATED)
     @SecurityRequirement(name = "BasicAuth")
-    public Book createBook(@RequestBody BookInput newBookInput) {
-        Book newBook = new Book();
-        newBook.setTitle(newBookInput.getTitle());
-
-        return bookRepository.save(newBook);
+    public BookResponse createBook(@RequestBody @Valid BookRequest newBookRequest) {
+        return bookService.store(newBookRequest);
     }
 }

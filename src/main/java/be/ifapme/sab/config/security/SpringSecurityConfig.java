@@ -30,6 +30,8 @@ public class SpringSecurityConfig {
                                     antMatcher("/v3/**"),
                                     antMatcher("/h2-console/**")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.GET, "/books")).permitAll()
+                            //Test de store
+                            .requestMatchers(antMatcher(HttpMethod.POST, "/books")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.GET, "/books/**")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.POST, "/persons")).hasRole(UserRole.ADMIN.name())
                             .anyRequest().authenticated();

@@ -19,8 +19,8 @@ public class BookRequest {
 
         private Integer quantity;
 
-        @Enumerated(EnumType.STRING)
-        private BookCategory category_id;
+
+        private Integer category_id;
 
 
         //GETTERS
@@ -38,7 +38,7 @@ public class BookRequest {
 
         public Integer getQuantity(){return quantity;}
 
-        public BookCategory getCategoryid(){return category_id;}
+        public Integer getCategoryid(){return category_id;}
 
 
         //Les setters
@@ -57,7 +57,7 @@ public class BookRequest {
 
         public void setQuantity(Integer quantity){this.quantity = quantity;}
 
-        public void setCategoryid(BookCategory category_id){this.category_id = category_id;}
+        public void setCategoryid(Integer category_id){this.category_id = category_id;}
 
 
 

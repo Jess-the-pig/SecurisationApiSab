@@ -1,63 +1,29 @@
-package be.ifapme.sab.model.entities;
+package be.ifapme.sab.api.DTO;
 
-import jakarta.persistence.*;
+import be.ifapme.sab.model.entities.BookCategory;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 
-@Entity
-@Table(name = "books", schema = "public")
-public class Book {
-
-    //Variables
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Long id;
-
-
+public class BookResponse {
     private String title;
-
 
     private Long isbn;
 
-
     private String description;
-
 
     private String photo;
 
-
     private Float price;
-
 
     private Integer quantity;
 
     private Integer category_id;
 
-    //Init
-
-    public Book(){}
-
-    public Book(Long id, String title, Long isbn, String description, String photo, Float price, Integer quantity, Integer category_id){
-        this.id=id;
-        this.title=title;
-        this.isbn=isbn;
-        this.description=description;
-        this.photo=photo;
-        this.price=price;
-        this.quantity=quantity;
-        this.category_id=category_id;
-    }
-
-    //Getters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+public BookResponse(String title, String description){
+    this.title = title;
+    this.description = description;
+}
+    //GETTERS
     public String getTitle() {
         return title;
     }
@@ -75,7 +41,6 @@ public class Book {
     public Integer getCategoryid(){return category_id;}
 
 
-
     //Les setters
 
     public void setTitle(String title) {
@@ -90,7 +55,8 @@ public class Book {
 
     public void setPrice(Float price){this.price = price;}
 
-    public void setQuantity(Integer quantity){this.quantity= quantity;}
+    public void setQuantity(Integer quantity){this.quantity = quantity;}
 
     public void setCategoryid(Integer category_id){this.category_id = category_id;}
+
 }
