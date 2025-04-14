@@ -27,7 +27,7 @@ public class PersonController {
     @SecurityRequirement(name = "BasicAuth")
     private Person createNewPerson(@RequestBody PersonInput personInput) {
         String hashedPassword = passwordEncoder.encode(personInput.getPassword());
-        Person newPerson = new Person(personInput.getUsername(), hashedPassword, UserRole.USER);
+        Person newPerson = new Person(personInput.getUsername(), hashedPassword, UserRole.USER, personInput.getEmail());
 
         return personRepository.save(newPerson);
     }
