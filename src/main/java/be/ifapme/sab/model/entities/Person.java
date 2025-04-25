@@ -1,15 +1,15 @@
 package be.ifapme.sab.model.entities;
 
+import be.ifapme.sab.model.entities.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "person", schema = "public")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String username;
 
     private String email;
 
@@ -19,11 +19,11 @@ public class Person {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+
     public Person() {
     }
 
-    public Person(String username, String passwordHash, UserRole role, String email) {
-        this.username = username;
+    public Person(String passwordHash, UserRole role, String email) {
         this.passwordHash = passwordHash;
         this.role = role;
         this.email = email;
@@ -34,9 +34,6 @@ public class Person {
         return id;
     }
 
-    public String getUsername() {
-        return username;
-    }
 
     public String getPasswordHash() {
         return passwordHash;
@@ -50,9 +47,11 @@ public class Person {
         return email;
     }
 
-    public void setUsername(String username){this.username = username;}
+
+
     public void setPasswordHash(String passwordHash){this.passwordHash = passwordHash;}
-    public void setUserRole(UserRole userRole){this.role = role;}
+    public void setRole(UserRole userRole){this.role = role;}
     public void setEmail(String email){this.email = email;}
+
 
 }

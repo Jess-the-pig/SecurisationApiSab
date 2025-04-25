@@ -1,9 +1,5 @@
 package be.ifapme.sab.api.DTO;
 
-import be.ifapme.sab.model.entities.BookCategory;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-
 public class BookResponse {
     private String title;
 

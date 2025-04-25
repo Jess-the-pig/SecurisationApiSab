@@ -1,9 +1,12 @@
 package be.ifapme.sab.api.DTO;
 
-public class PersonInput {
+import be.ifapme.sab.model.entities.enums.UserRole;
+
+public class PersonRequest {
     private String username;
     private String password;
     private String email;
+    private UserRole role;
 
     public String getUsername() {
         return username;
@@ -24,4 +27,12 @@ public class PersonInput {
     public String getEmail(){return email;}
 
     public void setEmail(){this.email = email;}
+
+    public UserRole getRole(){
+        return role;
+    }
+
+    public void setRole(UserRole role){
+        this.role = role;
+    }
 }

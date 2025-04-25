@@ -41,10 +41,6 @@ public class BookController {
         return bookOptional.get();
     }
 
-    @PostMapping(path = "/books")
-    @ResponseStatus(HttpStatus.CREATED)
-    @SecurityRequirement(name = "BasicAuth")
-    public BookResponse createBook(@RequestBody @Valid BookRequest newBookRequest) {
-        return bookService.store(newBookRequest);
-    }
+
+
 }

@@ -1,7 +1,5 @@
 package be.ifapme.sab.api.DTO;
 
-import be.ifapme.sab.model.entities.BookCategory;
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 
 public class BookRequest {
