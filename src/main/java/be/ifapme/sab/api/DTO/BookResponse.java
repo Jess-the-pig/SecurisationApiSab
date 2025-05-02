@@ -3,7 +3,7 @@ package be.ifapme.sab.api.DTO;
 public class BookResponse {
     private String title;
 
-    private Long isbn;
+    private String isbn;
 
     private String description;
 
@@ -15,16 +15,32 @@ public class BookResponse {
 
     private Integer category_id;
 
-public BookResponse(String title, String description){
-    this.title = title;
-    this.description = description;
-}
+
+    public BookResponse(String title, String isbn, String description, String photo, Float price, Integer quantity, Integer category_id){
+        this.title = title;
+        this.isbn=isbn;
+        this.description = description;
+        this.photo = photo;
+        this.price = price;
+        this.quantity = quantity;
+        this.category_id = category_id;
+
+    }
+
+    public BookResponse(String title, String description){
+        this.title = title;
+        this.description = description;
+    }
+
+
+
+
     //GETTERS
     public String getTitle() {
         return title;
     }
 
-    public Long getIsbn(){return isbn;}
+    public String getIsbn(){return isbn;}
 
     public String getDescription(){return description;}
 
@@ -36,14 +52,13 @@ public BookResponse(String title, String description){
 
     public Integer getCategoryid(){return category_id;}
 
-
-    //Les setters
+    //SETTERS
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setIsbn(Long isbn){this.isbn = isbn;}
+    public void setIsbn(String isbn){this.isbn = isbn;}
 
     public void setDescription(String description){this.description = description;}
 

@@ -1,27 +1,26 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.Person;
+import be.ifapme.sab.model.entities.enums.UserRole;
+
 public class PersonResponse {
     private String username;
-    private String password;
-    private String email;
+    private UserRole role;
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
+    public PersonResponse(String username, UserRole role){
         this.username = username;
+        this.role = role;
     }
 
-    public String getPassword() {
-        return password;
+    public UserRole getRole(){
+        return role;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRole(){
+        this.role=role;
     }
 
-    public String getEmail(){return email;}
+    public String getUsername(){return username;}
 
-    public void setEmail(){this.email = email;}
+    public void setUsername(){this.username = username;}
 }

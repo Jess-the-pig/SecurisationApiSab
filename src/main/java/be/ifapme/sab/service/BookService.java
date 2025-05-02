@@ -4,18 +4,35 @@ import be.ifapme.sab.api.DTO.BookRequest;
 import be.ifapme.sab.api.DTO.BookResponse;
 import be.ifapme.sab.model.entities.Book;
 import be.ifapme.sab.repository.BookRepository;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 @Service
 public class BookService {
     private final BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository){
         this.bookRepository=bookRepository;
+    }
+
+    //Rechercher tous les livres.
+    public List<BookResponse> getAllBooks(){
+        List<Book> booklist = bookRepository.findAll();
+        return booklist.stream()
+                .map(book -> new BookResponse(
+                        book.getTitle(),
+                        book.getIsbn(),
+                        book.getDescription(),
+                        book.getPhoto(),
+                        book.getPrice(),
+                        book.getQuantity(),
+                        book.getCategoryid()
+                ))
+                .collect(Collectors.toList());
     }
 
     //Enregistrer un livre.
@@ -32,4 +49,19 @@ public class BookService {
         Book Booksaved =  bookRepository.save(book);
         return new BookResponse(Booksaved.getDescription(),Booksaved.getTitle());
     }
+
+    //Find by id
+    public BookResponse getBookbyId(Long id){
+        Optional<Book> bookOptional = bookRepository.findById(id);
+        if(bookOptional.isPresent()){
+            Book book = bookOptional.get();
+            return new BookResponse(
+                    book.getTitle(),
+                    book.getDescription()
+            );
+        }else{
+            throw new EntityNotFoundException("Livre avec ID " + id + " introuvable");
+        }
+    }
+
 }

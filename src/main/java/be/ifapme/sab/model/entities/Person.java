@@ -11,10 +11,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String email;
+    private String username;
 
     @JsonIgnore
-    private String passwordHash;
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
@@ -23,10 +23,10 @@ public class Person {
     public Person() {
     }
 
-    public Person(String passwordHash, UserRole role, String email) {
-        this.passwordHash = passwordHash;
+    public Person(String password, UserRole role, String username) {
+        this.password = password;
         this.role = role;
-        this.email = email;
+        this.username = username;
     }
 
 
@@ -35,23 +35,23 @@ public class Person {
     }
 
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
     public UserRole getRole() {
         return role;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
 
 
-    public void setPasswordHash(String passwordHash){this.passwordHash = passwordHash;}
+    public void setPassword(String password){this.password = password;}
     public void setRole(UserRole userRole){this.role = role;}
-    public void setEmail(String email){this.email = email;}
+    public void setUsername(String username){this.username = username;}
 
 
 }

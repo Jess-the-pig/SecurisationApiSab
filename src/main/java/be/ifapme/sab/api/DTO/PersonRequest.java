@@ -5,7 +5,6 @@ import be.ifapme.sab.model.entities.enums.UserRole;
 public class PersonRequest {
     private String username;
     private String password;
-    private String email;
     private UserRole role;
 
     public String getUsername() {
@@ -24,9 +23,6 @@ public class PersonRequest {
         this.password = password;
     }
 
-    public String getEmail(){return email;}
-
-    public void setEmail(){this.email = email;}
 
     public UserRole getRole(){
         return role;

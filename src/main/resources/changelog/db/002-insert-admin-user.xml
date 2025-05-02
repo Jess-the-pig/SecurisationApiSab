@@ -8,8 +8,8 @@
 
 <changeSet id="002" author="toi">
     <insert tableName="person">
-        <column name="email" value="admin"/>
-        <column name="password_hash" value="$2a$12$fxqB1ntEEWw4PPlz3kYzdeYYC5QawyrlIAEPvK2jQaz5Edmys8qX6"/>
+        <column name="username" value="admin"/>
+        <column name="password" value="$2a$12$fxqB1ntEEWw4PPlz3kYzdeYYC5QawyrlIAEPvK2jQaz5Edmys8qX6"/>
         <column name="role" value="ADMIN"/>
     </insert>
 </changeSet>

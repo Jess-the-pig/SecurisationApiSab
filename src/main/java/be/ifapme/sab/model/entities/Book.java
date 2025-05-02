@@ -17,7 +17,7 @@ public class Book {
     private String title;
 
 
-    private Long isbn;
+    private String isbn;
 
 
     private String description;
@@ -37,7 +37,7 @@ public class Book {
 
     public Book(){}
 
-    public Book(Long id, String title, Long isbn, String description, String photo, Float price, Integer quantity, Integer category_id){
+    public Book(Long id, String title, String isbn, String description, String photo, Float price, Integer quantity, Integer category_id){
         this.id=id;
         this.title=title;
         this.isbn=isbn;
@@ -47,6 +47,7 @@ public class Book {
         this.quantity=quantity;
         this.category_id=category_id;
     }
+
 
     //Getters
 
@@ -62,7 +63,7 @@ public class Book {
         return title;
     }
 
-    public Long getIsbn(){return isbn;}
+    public String getIsbn(){return isbn;}
 
     public String getDescription(){return description;}
 
@@ -82,7 +83,7 @@ public class Book {
         this.title = title;
     }
 
-    public void setIsbn(Long isbn){this.isbn = isbn;}
+    public void setIsbn(String isbn){this.isbn = isbn;}
 
     public void setDescription(String description){this.description = description;}
 

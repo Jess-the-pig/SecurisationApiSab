@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/admin")
 public class UserOrderController {
 
     @GetMapping(path = "/orders")
@@ -15,6 +15,11 @@ public class UserOrderController {
 
     @GetMapping(path = "/orders/{orderId}")
     private UserResponse getOrderbyId() {
+        return UserResponse;
+    }
+
+    @GetMapping(path = "/orders/{userId}")
+    private UserResponse getOrderbyuser() {
         return UserResponse;
     }
 

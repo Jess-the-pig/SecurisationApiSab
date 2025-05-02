@@ -7,7 +7,7 @@ public class BookRequest {
         @NotBlank
         private String title;
 
-        private Long isbn;
+        private String isbn;
 
         private String description;
 
@@ -26,7 +26,7 @@ public class BookRequest {
             return title;
         }
 
-        public Long getIsbn(){return isbn;}
+        public String getIsbn(){return isbn;}
 
         public String getDescription(){return description;}
 
@@ -45,7 +45,7 @@ public class BookRequest {
             this.title = title;
         }
 
-        public void setIsbn(Long isbn){this.isbn = isbn;}
+        public void setIsbn(String isbn){this.isbn = isbn;}
 
         public void setDescription(String description){this.description = description;}
 
