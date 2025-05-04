@@ -1,31 +1,58 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.Book;
+import be.ifapme.sab.model.entities.Cart;
+
+import java.math.BigDecimal;
+
 public class CartItemResponse {
 
-    private Long item_id;
+
+    private Cart cart;
+
+    private Book book;
+
+    private Integer quantity;
+
+    private BigDecimal price;
 
 
-    private Integer item_quantity;
-
-    public CartItemResponse(Long item_id,Integer item_quantity){
-        this.item_id=item_id;
-        this.item_quantity=item_quantity;
+    public CartItemResponse(Cart cart, Book book, Integer quantity, BigDecimal price){
+        this.cart=cart;
+        this.book=book;
+        this.quantity=quantity;
+        this.price=price;
     }
 
-    public void setItem_quantity(Integer item_quantity) {
-        this.item_quantity = item_quantity;
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 
-    public Integer getItem_quantity() {
-        return item_quantity;
+    public Cart getCart() {
+        return cart;
     }
 
-    public void setItem_id(Long item_id) {
-        this.item_id = item_id;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
+    public Book getBook() {
+        return book;
+    }
 
-    public Long getItem_id() {
-        return item_id;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
     }
 }

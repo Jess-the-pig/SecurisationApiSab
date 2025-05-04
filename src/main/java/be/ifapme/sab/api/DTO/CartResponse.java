@@ -1,29 +1,31 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.enums.CartStatus;
+
 public class CartResponse {
 
 
     private Long user_id;
 
-    private Boolean cart_payed;
+    private CartStatus status;
 
 
 
-    public CartResponse (Long user_id, Boolean cart_payed){
+    public CartResponse (Long user_id, CartStatus status){
         this.user_id = user_id;
-        this.cart_payed=cart_payed;
+        this.status=status;
     }
 
     //Setters
 
-    public Boolean getCart_payed() {
-        return cart_payed;
+
+    public void setStatus(CartStatus status) {
+        this.status = status;
     }
 
-    public void setCart_payed(Boolean cart_payed) {
-        this.cart_payed = cart_payed;
+    public CartStatus getStatus() {
+        return status;
     }
-
 
     public void setUser_id(Long user_id) {
         this.user_id = user_id;

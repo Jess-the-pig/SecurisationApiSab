@@ -76,11 +76,11 @@ public class SpringSecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         return username -> {
-            Person user = personRepository.findByEmail(username)
+            Person user = personRepository.findByUsername(username)
                     .orElseThrow(() -> new UsernameNotFoundException("User not found"));
             return org.springframework.security.core.userdetails.User
-                    .withUsername(user.getEmail())
-                    .password(user.getPasswordHash())
+                    .withUsername(user.getUsername())
+                    .password(user.getPassword())
                     .roles(user.getRole().name())
 
                     .build();

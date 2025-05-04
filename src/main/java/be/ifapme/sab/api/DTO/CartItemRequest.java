@@ -1,43 +1,62 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.Book;
+import be.ifapme.sab.model.entities.Cart;
+import jakarta.persistence.Column;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+import java.math.BigDecimal;
+
 public class CartItemRequest {
 
 
-    private Long item_id;
+    private Cart cart;
 
-    private Long cart_id;
+    private Book book;
 
-    private Integer item_quantity;
+    private Integer quantity;
 
-    public CartItemRequest(Long item_id, Long cart_id, Integer item_quantity){
-        this.item_id=item_id;
-        this.cart_id=cart_id;
-        this.item_quantity=item_quantity;
+    private BigDecimal price;
+
+
+    public CartItemRequest(Cart cart, Book book, Integer quantity, BigDecimal price){
+        this.cart=cart;
+        this.book=book;
+        this.quantity=quantity;
+        this.price=price;
     }
 
-    public void setItem_quantity(Integer item_quantity) {
-        this.item_quantity = item_quantity;
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 
-    public Integer getItem_quantity() {
-        return item_quantity;
+    public Cart getCart() {
+        return cart;
     }
 
-
-    public void setCart_id(Long cart_id) {
-        this.cart_id = cart_id;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public void setItem_id(Long item_id) {
-        this.item_id = item_id;
+    public Book getBook() {
+        return book;
     }
 
-
-    public Long getCart_id() {
-        return cart_id;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
-    public Long getItem_id() {
-        return item_id;
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
     }
 }

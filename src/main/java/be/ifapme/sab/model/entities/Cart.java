@@ -1,7 +1,10 @@
 package be.ifapme.sab.model.entities;
 
+import be.ifapme.sab.model.entities.enums.CartStatus;
+import be.ifapme.sab.model.entities.enums.OrderStatus;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -16,28 +19,29 @@ public class Cart {
     @ManyToOne
     private Person user;
 
-    private Boolean cart_payed;
+    private CartStatus status;
 
-
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartItem> items;
 
 
 
     public Cart(Long id, Person user){
         this.id = id;
         this.user = user;
-        this.cart_payed = cart_payed;
+        this.status = status;
     }
     public Cart(){}
 
     //Setters
 
 
-    public void setCart_payed(Boolean cart_payed) {
-        this.cart_payed = cart_payed;
+    public void setStatus(CartStatus status) {
+        this.status = status;
     }
 
-    public Boolean getCart_payed() {
-        return cart_payed;
+    public CartStatus getStatus() {
+        return status;
     }
 
     public void setId(Long id) {
@@ -57,6 +61,22 @@ public class Cart {
 
     public Person getUser() {
         return user;
+    }
+
+
+    public List<CartItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<CartItem> items) {
+        this.items = items;
+    }
+
+    // Calcul du montant total du panier
+    public BigDecimal calculateTotalAmount() {
+        return items.stream()
+                .map(CartItem::getTotalAmount)  // On récupère le montant total de chaque article
+                .reduce(BigDecimal.ZERO, BigDecimal::add);  // On additionne les montants de tous les articles
     }
 
 

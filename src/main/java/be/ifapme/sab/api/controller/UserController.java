@@ -20,35 +20,41 @@ public class UserController {
 
 
     @GetMapping(path = "/profile")
-    private PersonResponse consultProfile(Principal principal) {
+    public PersonResponse consultProfile(Principal principal) {
         return personService.getuserInfo(principal.getName());
     }
 
     @PostMapping(path = "/cart/items")
-    private void addItemtoCard(@RequestBody @Valid BookRequest bookRequest) {
+    public void addItemtoCard(@RequestBody @Valid BookRequest bookRequest) {
        cartService.storeItem(bookRequest);
 
     }
 
     @PostMapping(path="/cart")
-    private void createCart(@AuthenticationPrincipal CustomUserDetails userDetails){
+    public void createCart(@AuthenticationPrincipal CustomUserDetails userDetails){
         cartService.createCart(userDetails);
     }
 
     @GetMapping(path = "/cart/items")
-    private List<CartItemResponse> SeeAllItems(@RequestBody @Valid CartRequest cartRequest) {
+    public List<CartItemResponse> SeeAllItems(@RequestBody @Valid CartRequest cartRequest) {
         return cartService.seeAllItems(cartRequest);
     }
 
     @GetMapping(path = "/cart/items/{itemId}")
-    private ResponseEntity<CartItemResponse> SeeIteminCart(@PathVariable Long itemId, @AuthenticationPrincipal CustomUserDetails userDetails){
+    public ResponseEntity<CartItemResponse> SeeIteminCart(@PathVariable Long itemId, @AuthenticationPrincipal CustomUserDetails userDetails){
         return cartService.seeIteminCart(itemId,userDetails);
     }
 
     @DeleteMapping(path = "cart/items/{itemId}")
-    private void DeleteItemFromCart(@PathVariable Long itemId, @AuthenticationPrincipal CustomUserDetails userDetails){
+    public void DeleteItemFromCart(@PathVariable Long itemId, @AuthenticationPrincipal CustomUserDetails userDetails){
         cartService.deleteItemFromCart(itemId,userDetails);
     }
+
+    @PostMapping(path = "cart/checkout")
+    public ResponseEntity<?> checkout(@RequestParam Long cartId){
+        return cartService.processPayementandMakeOrder(cartId);
+    }
+
 
 
 
