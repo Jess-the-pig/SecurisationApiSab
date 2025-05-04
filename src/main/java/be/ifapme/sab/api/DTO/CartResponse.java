@@ -1,12 +1,19 @@
 package be.ifapme.sab.api.DTO;
 
 import be.ifapme.sab.model.entities.enums.CartStatus;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class CartResponse {
 
 
+    @NotBlank
     private Long user_id;
 
+    @Enumerated(EnumType.STRING)
+    @NotNull
     private CartStatus status;
 
 

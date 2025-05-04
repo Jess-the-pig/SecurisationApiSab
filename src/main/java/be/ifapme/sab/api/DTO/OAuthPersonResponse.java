@@ -1,25 +1,36 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.enums.UserRole;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.security.core.userdetails.User;
 
 @Builder
 @Data
 public class OAuthPersonResponse {
+    @NotBlank
     private String name;
+    @Email
     private String email;
-    private String role;
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 
-    public OAuthPersonResponse(String name, String email,String role){
+    public OAuthPersonResponse(String name, String email,UserRole role){
         this.name = name ;
         this.email = email;
         this.role = role;
     }
-    public String getRole(){
+    public UserRole getRole(){
         return role;
     }
 
-    public void setRole(String role){
+    public void setRole(UserRole role){
         this.role=role;
     }
 

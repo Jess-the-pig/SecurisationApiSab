@@ -1,6 +1,7 @@
 package be.ifapme.sab.service;
 
 import be.ifapme.sab.api.DTO.OrderResponse;
+import be.ifapme.sab.api.utils.SecurityUtils;
 import be.ifapme.sab.model.entities.Cart;
 import be.ifapme.sab.model.entities.Order;
 import be.ifapme.sab.model.entities.OrderItem;
@@ -11,7 +12,10 @@ import be.ifapme.sab.repository.OrderRepository;
 import be.ifapme.sab.repository.PaymentRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,13 +27,11 @@ public class OrderService {
 
     private OrderRepository orderRepository;
 
-    private CartRepository cartRepository;
-
-    private PaymentRepository paymentRepository;
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     @Transactional
     public Order convertCartToOrder(Cart cart, Payment payment) {
-        // Créer une nouvelle commande
+        logger.info("Conversion du panier vers commande");
         Order order = new Order();
         order.setPerson(cart.getUser());
         order.setPayment(payment);
@@ -55,10 +57,15 @@ public class OrderService {
 
     @Transactional
     public Order save(Order order) {
+
+        logger.info("Enregistrement de la commande");
         return orderRepository.save(order);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public List<OrderResponse> getAllOrders(){
+        logger.info("Recherche des commandes");
+        SecurityUtils.checkAdmin();
         List<Order> allOrderList = orderRepository.findAll();
 
         return allOrderList.stream()

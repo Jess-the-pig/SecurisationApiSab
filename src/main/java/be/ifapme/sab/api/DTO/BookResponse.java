@@ -1,18 +1,35 @@
 package be.ifapme.sab.api.DTO;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class BookResponse {
+    @NotBlank
+    @Size(max = 30)
     private String title;
 
+    @NotBlank
+    @Size(max = 13)
     private String isbn;
 
+    @NotBlank
+    @Size(max = 150)
     private String description;
 
+    @NotBlank
+    @Size(max = 30)
     private String photo;
 
+    @NotBlank
+    @Size(max = 5)
     private Float price;
 
+    @NotBlank
+    @Size(max = 3)
     private Integer quantity;
 
+    @NotBlank
+    @Size(max = 1)
     private Integer category_id;
 
 

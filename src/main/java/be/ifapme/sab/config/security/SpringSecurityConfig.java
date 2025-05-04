@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -35,6 +36,7 @@ import static org.springframework.security.web.util.matcher.AntPathRequestMatche
 @EnableWebSecurity
 @Configuration
 @AllArgsConstructor
+@EnableMethodSecurity
 public class SpringSecurityConfig {
 
     private OAuthRepository oAuthRepository;
@@ -49,23 +51,26 @@ public class SpringSecurityConfig {
                                     antMatcher("/v3/**"),
                                     antMatcher("/h2-console/**")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.GET, "/books")).permitAll()
-                            .requestMatchers(antMatcher(HttpMethod.POST, "/books")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.GET, "/books/**")).permitAll()
-                            .requestMatchers(antMatcher(HttpMethod.POST, "/persons")).permitAll()
                             .requestMatchers(antMatcher(HttpMethod.POST, "/registeruser")).permitAll()
 
-                            .requestMatchers(antMatcher(HttpMethod.GET, "/users/**")).hasRole(UserRole.USER.name())
+                            .requestMatchers(antMatcher(HttpMethod.GET, "/user/**")).hasRole(UserRole.USER.name())
+                            .requestMatchers(antMatcher(HttpMethod.POST, "/user/**")).hasRole(UserRole.USER.name())
+                            .requestMatchers(antMatcher(HttpMethod.DELETE, "/user/**")).hasRole(UserRole.USER.name())
+
                             .requestMatchers(antMatcher(HttpMethod.GET, "/admin/**")).hasRole(UserRole.ADMIN.name())
+                            .requestMatchers(antMatcher(HttpMethod.POST, "/admin/**")).hasRole(UserRole.ADMIN.name())
+                            .requestMatchers(antMatcher(HttpMethod.DELETE, "/admin/**")).hasRole(UserRole.ADMIN.name())
 
                             .anyRequest().authenticated();
 
                 })
                 .oauth2Login(oauth2 -> oauth2
-                        .defaultSuccessUrl("/secure", true)
+                        .defaultSuccessUrl("/user", true)
                         .successHandler(oAuth2AuthenticationSuccessHandler())
                 )
                 .formLogin(form -> form
-                        .defaultSuccessUrl("/secure", true))
+                        .defaultSuccessUrl("/user", true))
                 .headers(h -> h.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));

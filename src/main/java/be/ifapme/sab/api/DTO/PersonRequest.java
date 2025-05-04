@@ -1,10 +1,17 @@
 package be.ifapme.sab.api.DTO;
 
 import be.ifapme.sab.model.entities.enums.UserRole;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.NotBlank;
 
 public class PersonRequest {
+    @NotBlank
     private String username;
+    @NotBlank
     private String password;
+    @NotBlank
+    @Enumerated(EnumType.STRING)
     private UserRole role;
 
     public String getUsername() {

@@ -1,20 +1,28 @@
 package be.ifapme.sab.api.DTO;
 
+import be.ifapme.sab.model.entities.enums.CartStatus;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class CartRequest {
 
 
-
+    @NotBlank
     private Long user_id;
-
-    private Boolean cart_payed;
-
+    @NotBlank
     private Long cart_id;
 
 
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private CartStatus status;
 
-    public CartRequest (Long user_id, Boolean cart_payed,Long cart_id){
+
+    public CartRequest (Long user_id, CartStatus status,Long cart_id){
         this.user_id = user_id;
-        this.cart_payed=cart_payed;
+        this.status=status;
         this.cart_id=cart_id;
     }
 
@@ -29,12 +37,12 @@ public class CartRequest {
         this.cart_id = cart_id;
     }
 
-    public Boolean getCart_payed() {
-        return cart_payed;
+    public CartStatus getCart_payed() {
+        return status;
     }
 
     public void setCart_payed(Boolean cart_payed) {
-        this.cart_payed = cart_payed;
+        this.status = status;
     }
 
 

@@ -1,23 +1,36 @@
 package be.ifapme.sab.api.DTO;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class BookRequest {
 
         @NotBlank
+        @Size(max = 30, message = "Le titre ne doit pas contenir lus de 30 caractères")
         private String title;
 
+        @NotBlank
+        @Size(max = 13, message = "L'isbn ne contient pas plus de 13 caractères")
         private String isbn;
 
+        @NotBlank
+        @Size(max = 150, message = "La description doit rester courte")
         private String description;
 
+        @NotBlank
+        @Size(max = 30)
         private String photo;
 
+        @NotBlank
+        @Size(max = 5)
         private Float price;
 
+        @NotBlank
+        @Size(max = 3)
         private Integer quantity;
 
-
+        @NotBlank
+        @Size(max = 1)
         private Integer category_id;
 
 

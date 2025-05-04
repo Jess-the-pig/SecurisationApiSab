@@ -1,6 +1,7 @@
 package be.ifapme.sab.service;
 
 import be.ifapme.sab.api.DTO.*;
+import be.ifapme.sab.api.utils.SecurityUtils;
 import be.ifapme.sab.model.entities.*;
 import be.ifapme.sab.model.entities.enums.CartStatus;
 import be.ifapme.sab.model.entities.enums.PaymentStatus;
@@ -9,11 +10,14 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,13 +30,17 @@ public class CartService {
     private BookRepository bookRepository;
     private PaymentService paymentService;
     private OrderService orderService;
-    private OrderRepository orderRepository;
+    private static final Logger logger = LoggerFactory.getLogger(CartService.class);
+
 
     public CartService(CartRepository cartRepository){
         this.cartRepository = cartRepository;
     }
 
+    @PreAuthorize("hasRole('USER')")
     public List<CartItemResponse> seeAllItems(CartRequest cartRequest){
+        logger.info("Recherche des livres du panier");
+        SecurityUtils.checkUser();
         Long cartId = cartRequest.getCart_id();
 
         // Récupérer les items du panier
@@ -50,8 +58,10 @@ public class CartService {
 
     }
 
-
+    @PreAuthorize("hasRole('USER')")
     public CartResponse createCart(UserDetails userDetails) {
+        logger.info("Creation du panier");
+        SecurityUtils.checkUser();
         Optional<Person> user = personRepository.findByUsername(userDetails.getUsername());
         if (user.isPresent()) {
             Cart cart = new Cart();
@@ -59,11 +69,16 @@ public class CartService {
             cart.setStatus(CartStatus.PAID);
             cartRepository.save(cart);
             return new CartResponse(cart.getId(),cart.getStatus());
+        }else{
+            logger.error("Erreur du creation du panier");
+            return null;
         }
-        return null;
     }
 
+    @PreAuthorize("hasRole('USER')")
     public void storeItem(BookRequest bookRequest){
+        logger.info("Insertion du produit");
+        SecurityUtils.checkUser();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
 
@@ -84,7 +99,10 @@ public class CartService {
         cartItemRepository.save(cartItem);
     }
 
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<CartItemResponse> seeIteminCart(Long itemid, CustomUserDetails userDetails){
+        logger.info("Recherche de l'item dans le panier");
+        SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
         Cart cart = cartRepository.findByUser(user)
@@ -94,10 +112,10 @@ public class CartService {
                 .orElseThrow(() -> new EntityNotFoundException("Item not found"));
 
         if (!item.equals(cart)) {
+            logger.error("l'item ne se trouve pas dans le panier");
             throw new AccessDeniedException("This item does not belong to your cart");
         }
 
-        // 4. Mapper et retourner
         CartItemResponse response = new CartItemResponse(
                 item.getCart(),
                 item.getBook(),
@@ -108,7 +126,10 @@ public class CartService {
         return ResponseEntity.ok(response);
     }
 
+    @PreAuthorize("hasRole('USER')")
     public void deleteItemFromCart(Long itemid, CustomUserDetails userDetails){
+        logger.info("Supression de l'item du panier");
+        SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
         Cart cart = cartRepository.findByUser(user)
@@ -118,6 +139,7 @@ public class CartService {
                 .orElseThrow(() -> new EntityNotFoundException("Item not found"));
 
         if (!item.equals(cart)) {
+            logger.error("l'item ne se trouve pas dans le panier");
             throw new AccessDeniedException("This item does not belong to your cart");
         }
 
@@ -125,8 +147,12 @@ public class CartService {
 
 
     }
+
     @Transactional
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> processPayementandMakeOrder(Long cartId){
+        logger.info("Payment en cours");
+        SecurityUtils.checkUser();
         Cart cart = cartRepository.findById(cartId)
                 .orElseThrow(() -> new EntityNotFoundException("Panier non trouvé"));
 

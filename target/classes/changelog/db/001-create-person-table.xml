@@ -11,10 +11,10 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" nullable="true"/>
             </column>
-            <column name="password_hash" type="VARCHAR(255)">
+            <column name="username" type="VARCHAR(255)">
                 <constraints nullable="true"/>
             </column>
-            <column name="email" type="VARCHAR(255)">
+            <column name="password" type="VARCHAR(255)">
                 <constraints nullable="true"/>
             </column>
             <column name="role" type="VARCHAR(50)">

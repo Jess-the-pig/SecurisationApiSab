@@ -2,10 +2,14 @@ package be.ifapme.sab.service;
 
 import be.ifapme.sab.api.DTO.BookRequest;
 import be.ifapme.sab.api.DTO.BookResponse;
+import be.ifapme.sab.api.utils.SecurityUtils;
 import be.ifapme.sab.model.entities.Book;
 import be.ifapme.sab.repository.BookRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +18,7 @@ import java.util.stream.Collectors;
 @Service
 public class BookService {
     private final BookRepository bookRepository;
+    private static final Logger logger = LoggerFactory.getLogger(BookService.class);
 
     public BookService(BookRepository bookRepository){
         this.bookRepository=bookRepository;
@@ -21,6 +26,7 @@ public class BookService {
 
     //Rechercher tous les livres.
     public List<BookResponse> getAllBooks(){
+        logger.info("Recherche des livres");
         List<Book> booklist = bookRepository.findAll();
         return booklist.stream()
                 .map(book -> new BookResponse(
@@ -36,7 +42,11 @@ public class BookService {
     }
 
     //Enregistrer un livre.
+    @PreAuthorize("hasRole('ADMIN')")
     public BookResponse store(BookRequest bookrequest){
+        logger.info("Insertion de livre");
+        SecurityUtils.checkAdmin();
+
         Book book = new Book();
         book.setTitle(bookrequest.getTitle());
         book.setIsbn(bookrequest.getIsbn());
@@ -52,6 +62,7 @@ public class BookService {
 
     //Find by id
     public BookResponse getBookbyId(Long id){
+        logger.info("Recherche du livre");
         Optional<Book> bookOptional = bookRepository.findById(id);
         if(bookOptional.isPresent()){
             Book book = bookOptional.get();
@@ -60,6 +71,7 @@ public class BookService {
                     book.getDescription()
             );
         }else{
+            logger.error("Livre avec ID " + id + " introuvable");
             throw new EntityNotFoundException("Livre avec ID " + id + " introuvable");
         }
     }

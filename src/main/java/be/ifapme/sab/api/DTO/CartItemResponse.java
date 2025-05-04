@@ -2,18 +2,26 @@ package be.ifapme.sab.api.DTO;
 
 import be.ifapme.sab.model.entities.Book;
 import be.ifapme.sab.model.entities.Cart;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
 public class CartItemResponse {
 
 
+    @NotBlank
     private Cart cart;
 
+    @NotBlank
     private Book book;
 
+    @NotBlank
+    @Size(max = 3)
     private Integer quantity;
 
+    @NotBlank
+    @Size(max = 5)
     private BigDecimal price;
 
 

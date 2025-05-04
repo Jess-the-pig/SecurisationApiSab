@@ -6,18 +6,25 @@ import jakarta.persistence.Column;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
 public class CartItemRequest {
 
-
+    @NotBlank
     private Cart cart;
 
+    @NotBlank
     private Book book;
 
+    @NotBlank
+    @Size(max = 3)
     private Integer quantity;
 
+    @NotBlank
+    @Size(max = 5)
     private BigDecimal price;
 
 

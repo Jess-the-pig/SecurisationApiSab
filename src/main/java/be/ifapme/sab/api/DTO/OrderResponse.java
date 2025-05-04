@@ -3,6 +3,7 @@ package be.ifapme.sab.api.DTO;
 import be.ifapme.sab.model.entities.*;
 import be.ifapme.sab.model.entities.enums.OrderStatus;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,14 +12,19 @@ import java.util.List;
 
 public class OrderResponse {
 
+    @NotBlank
     private Person person;
 
+    @NotBlank
     private Cart cart;
 
     private Payment payment;
 
+    @NotBlank
     private BigDecimal totalAmount;
 
+    @NotBlank
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
 
