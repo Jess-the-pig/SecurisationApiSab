@@ -5,50 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/utils/SecurityUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/mon-application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/mon-application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/BookResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/http/store.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/Aristote.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonRequest$OAuthPersonRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonRequest$OAuthPersonRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonResponse$OAuthPersonResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonResponse$OAuthPersonResponseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/OAuthPersonResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/DTO/PersonInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/BookCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/OAuthPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/OAuthPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/UserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/BookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/repository/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/changelog/db/001-create-person-table.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/changelog/db/001-create-person-table.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/changelog/db/002-insert-admin-user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/changelog/db/002-insert-admin-user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/model/entities/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PersonService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +65,7 @@
     "JUnit.AristoteApplicationTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "security",
+    "git-widget-placeholder": "WIP",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jessicazawistowska/Desktop/Travail SAB/sab/src/main/resources",
     "project.structure.last.edited": "Modules",
@@ -135,5 +112,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/_DS_Store$AristoteApplication.ic" NAME="AristoteApplication Coverage Results" MODIFIED="1746381610964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>be.ifapme.sab.*</FILTER>
+    </SUITE>
   </component>
 </project>

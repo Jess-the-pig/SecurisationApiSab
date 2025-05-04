@@ -7,6 +7,7 @@ import be.ifapme.sab.model.entities.Person;
 import be.ifapme.sab.model.entities.enums.UserRole;
 import be.ifapme.sab.repository.PersonRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,15 +20,15 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Service
+@Slf4j
 public class PersonService {
 
     private PersonRepository personRepository;
 
     private PasswordEncoder passwordEncoder;
-    private static final Logger logger = LoggerFactory.getLogger(PersonService.class);
 
     public void registerUser(PersonRequest personInput){
-        logger.info("Enregistrement utilisateur");
+        log.info("Enregistrement utilisateur");
         String username = personInput.getUsername();
         if(username != null && !personRepository.existsByUsername(username)){
             Person user = new Person();
@@ -40,7 +41,7 @@ public class PersonService {
     }
 
     public void createAdmin(PersonRequest personInput){
-        logger.info("Creation d'un admin");
+        log.info("Creation d'un admin");
         String username = personInput.getUsername();
 
         if(username != null && personRepository.existsByUsername(username)){
@@ -50,7 +51,7 @@ public class PersonService {
 
     @PreAuthorize("hasRole('ADMIN')")
     public PersonResponse getuserInfo(String email){
-        logger.info("Recherche le l'information utilisateur");
+        log.info("Recherche le l'information utilisateur");
         SecurityUtils.checkAdmin();
         Person person = personRepository.findByUsername(email)
             .orElseThrow(() -> new UsernameNotFoundException("Utilisateur non trouvé"));

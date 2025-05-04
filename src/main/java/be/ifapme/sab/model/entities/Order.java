@@ -2,12 +2,14 @@ package be.ifapme.sab.model.entities;
 
 import be.ifapme.sab.model.entities.enums.OrderStatus;
 import jakarta.persistence.*;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Order {
 
     @Id
@@ -32,12 +34,16 @@ public class Order {
     @Column(nullable = false)
     private OrderStatus status;
 
+    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
     @Column(nullable = false)
     private LocalDateTime orderDate;
 
+    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
     @Column(nullable = true)
     private LocalDateTime shippingDate;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
     public Long getId() {

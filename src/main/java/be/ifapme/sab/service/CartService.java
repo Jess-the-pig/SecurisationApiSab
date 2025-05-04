@@ -8,6 +8,7 @@ import be.ifapme.sab.model.entities.enums.PaymentStatus;
 import be.ifapme.sab.repository.*;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class CartService {
     private CartRepository cartRepository;
     private PersonRepository personRepository;
@@ -30,7 +32,6 @@ public class CartService {
     private BookRepository bookRepository;
     private PaymentService paymentService;
     private OrderService orderService;
-    private static final Logger logger = LoggerFactory.getLogger(CartService.class);
 
 
     public CartService(CartRepository cartRepository){
@@ -39,7 +40,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public List<CartItemResponse> seeAllItems(CartRequest cartRequest){
-        logger.info("Recherche des livres du panier");
+        log.info("Recherche des livres du panier");
         SecurityUtils.checkUser();
         Long cartId = cartRequest.getCart_id();
 
@@ -60,7 +61,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public CartResponse createCart(UserDetails userDetails) {
-        logger.info("Creation du panier");
+        log.info("Creation du panier");
         SecurityUtils.checkUser();
         Optional<Person> user = personRepository.findByUsername(userDetails.getUsername());
         if (user.isPresent()) {
@@ -70,14 +71,14 @@ public class CartService {
             cartRepository.save(cart);
             return new CartResponse(cart.getId(),cart.getStatus());
         }else{
-            logger.error("Erreur du creation du panier");
+            log.error("Erreur du creation du panier");
             return null;
         }
     }
 
     @PreAuthorize("hasRole('USER')")
     public void storeItem(BookRequest bookRequest){
-        logger.info("Insertion du produit");
+        log.info("Insertion du produit");
         SecurityUtils.checkUser();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
@@ -101,7 +102,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<CartItemResponse> seeIteminCart(Long itemid, CustomUserDetails userDetails){
-        logger.info("Recherche de l'item dans le panier");
+        log.info("Recherche de l'item dans le panier");
         SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
@@ -112,7 +113,7 @@ public class CartService {
                 .orElseThrow(() -> new EntityNotFoundException("Item not found"));
 
         if (!item.equals(cart)) {
-            logger.error("l'item ne se trouve pas dans le panier");
+            log.error("l'item ne se trouve pas dans le panier");
             throw new AccessDeniedException("This item does not belong to your cart");
         }
 
@@ -128,7 +129,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public void deleteItemFromCart(Long itemid, CustomUserDetails userDetails){
-        logger.info("Supression de l'item du panier");
+        log.info("Supression de l'item du panier");
         SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
@@ -139,7 +140,7 @@ public class CartService {
                 .orElseThrow(() -> new EntityNotFoundException("Item not found"));
 
         if (!item.equals(cart)) {
-            logger.error("l'item ne se trouve pas dans le panier");
+            log.error("l'item ne se trouve pas dans le panier");
             throw new AccessDeniedException("This item does not belong to your cart");
         }
 
@@ -151,7 +152,7 @@ public class CartService {
     @Transactional
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> processPayementandMakeOrder(Long cartId){
-        logger.info("Payment en cours");
+        log.info("Payment en cours");
         SecurityUtils.checkUser();
         Cart cart = cartRepository.findById(cartId)
                 .orElseThrow(() -> new EntityNotFoundException("Panier non trouvé"));

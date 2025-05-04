@@ -726,3 +726,226 @@ Caused by: org.hibernate.AnnotationException: Association 'be.ifapme.sab.model.e
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
 	... 15 common frames omitted
+2025-05-04 20:21:58 INFO  be.ifapme.sab.AristoteApplication - Starting AristoteApplication using Java 23 with PID 47631 (/Users/jessicazawistowska/Desktop/Travail SAB/sab/target/classes started by jessicazawistowska in /Users/jessicazawistowska/Desktop/Travail SAB/sab)
+2025-05-04 20:21:58 INFO  be.ifapme.sab.AristoteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 20:22:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 20:22:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 7 JPA repository interfaces.
+2025-05-04 20:22:02 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-04 20:22:02 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-04 20:22:02 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 20:22:02 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 20:22:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 20:22:02 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3905 ms
+2025-05-04 20:22:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 20:22:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:userdb user=USER
+2025-05-04 20:22:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 20:22:03 INFO  liquibase.database - Set default schema name to PUBLIC
+2025-05-04 20:22:05 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-05-04 20:22:05 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:22:05 INFO  liquibase.lockservice - Successfully acquired change log lock
+2025-05-04 20:22:05 INFO  liquibase.command - Using deploymentId: 6382925397
+2025-05-04 20:22:05 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:22:05 INFO  liquibase.ui - Running Changeset: changelog/db/001-create-person-table.xml::001::admin
+2025-05-04 20:22:05 INFO  liquibase.changelog - Table person created
+2025-05-04 20:22:05 INFO  liquibase.changelog - ChangeSet changelog/db/001-create-person-table.xml::001::admin ran successfully in 30ms
+2025-05-04 20:22:05 INFO  liquibase.ui - Running Changeset: changelog/db/002-insert-admin-user.xml::002::toi
+2025-05-04 20:22:05 INFO  liquibase.changelog - New row inserted into person
+2025-05-04 20:22:05 INFO  liquibase.changelog - ChangeSet changelog/db/002-insert-admin-user.xml::002::toi ran successfully in 4ms
+2025-05-04 20:22:05 INFO  liquibase.ui - Running Changeset: changelog/db/003-create-book-table.xml::003::admin
+2025-05-04 20:22:05 INFO  liquibase.changelog - Table books created
+2025-05-04 20:22:05 INFO  liquibase.changelog - ChangeSet changelog/db/003-create-book-table.xml::003::admin ran successfully in 9ms
+2025-05-04 20:22:05 INFO  liquibase.ui - Running Changeset: changelog/db/004-create-category-table.xml::004::admin
+2025-05-04 20:22:05 INFO  liquibase.changelog - Table category created
+2025-05-04 20:22:05 INFO  liquibase.changelog - ChangeSet changelog/db/004-create-category-table.xml::004::admin ran successfully in 4ms
+2025-05-04 20:22:05 INFO  liquibase.ui - Running Changeset: changelog/db/005-insert-categories-test.xml::005::toi
+2025-05-04 20:22:05 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:22:05 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:22:05 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:22:05 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:22:05 INFO  liquibase.changelog - ChangeSet changelog/db/005-insert-categories-test.xml::005::toi ran successfully in 11ms
+2025-05-04 20:22:05 INFO  liquibase.util - UPDATE SUMMARY
+2025-05-04 20:22:05 INFO  liquibase.util - Run:                          5
+2025-05-04 20:22:05 INFO  liquibase.util - Previously run:               0
+2025-05-04 20:22:05 INFO  liquibase.util - Filtered out:                 0
+2025-05-04 20:22:05 INFO  liquibase.util - -------------------------------
+2025-05-04 20:22:05 INFO  liquibase.util - Total change sets:            5
+2025-05-04 20:22:05 INFO  liquibase.util - Update summary generated
+2025-05-04 20:22:05 INFO  liquibase.command - Update command completed successfully.
+2025-05-04 20:22:05 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 10
+2025-05-04 20:22:05 INFO  liquibase.lockservice - Successfully released change log lock
+2025-05-04 20:22:05 INFO  liquibase.command - Command execution complete
+2025-05-04 20:22:05 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 20:22:05 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-04 20:22:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-04 20:22:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 20:22:06 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+2025-05-04 20:22:06 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-04 20:22:06 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-04 20:22:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 20:22:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 20:22:10 TRACE o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {springSecurityConfig=be.ifapme.sab.config.security.SpringSecurityConfig$$SpringCGLIB$$0@37f687c1}
+2025-05-04 20:22:10 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-04 20:22:11 DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-04 20:22:11 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-04 20:22:12 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
+2025-05-04 20:22:12 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-04 20:22:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-04 20:22:12 INFO  be.ifapme.sab.AristoteApplication - Started AristoteApplication in 15.35 seconds (process running for 16.472)
+2025-05-04 20:23:22 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-04 20:23:22 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-04 20:23:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 20:23:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 20:23:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 20:26:58 INFO  be.ifapme.sab.AristoteApplication - Starting AristoteApplication using Java 23 with PID 47711 (/Users/jessicazawistowska/Desktop/Travail SAB/sab/target/classes started by jessicazawistowska in /Users/jessicazawistowska/Desktop/Travail SAB/sab)
+2025-05-04 20:26:58 INFO  be.ifapme.sab.AristoteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 20:27:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 20:27:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 7 JPA repository interfaces.
+2025-05-04 20:27:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-04 20:27:01 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-04 20:27:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 20:27:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 20:27:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 20:27:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3611 ms
+2025-05-04 20:27:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 20:27:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:userdb user=USER
+2025-05-04 20:27:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 20:27:02 INFO  liquibase.database - Set default schema name to PUBLIC
+2025-05-04 20:27:03 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:04 INFO  liquibase.lockservice - Successfully acquired change log lock
+2025-05-04 20:27:04 INFO  liquibase.command - Using deploymentId: 6383224217
+2025-05-04 20:27:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:04 INFO  liquibase.ui - Running Changeset: changelog/db/001-create-person-table.xml::001::admin
+2025-05-04 20:27:04 INFO  liquibase.changelog - Table person created
+2025-05-04 20:27:04 INFO  liquibase.changelog - ChangeSet changelog/db/001-create-person-table.xml::001::admin ran successfully in 16ms
+2025-05-04 20:27:04 INFO  liquibase.ui - Running Changeset: changelog/db/002-insert-admin-user.xml::002::toi
+2025-05-04 20:27:04 INFO  liquibase.changelog - New row inserted into person
+2025-05-04 20:27:04 INFO  liquibase.changelog - ChangeSet changelog/db/002-insert-admin-user.xml::002::toi ran successfully in 5ms
+2025-05-04 20:27:04 INFO  liquibase.ui - Running Changeset: changelog/db/003-create-book-table.xml::003::admin
+2025-05-04 20:27:04 INFO  liquibase.changelog - Table books created
+2025-05-04 20:27:04 INFO  liquibase.changelog - ChangeSet changelog/db/003-create-book-table.xml::003::admin ran successfully in 12ms
+2025-05-04 20:27:04 INFO  liquibase.ui - Running Changeset: changelog/db/004-create-category-table.xml::004::admin
+2025-05-04 20:27:04 INFO  liquibase.changelog - Table category created
+2025-05-04 20:27:04 INFO  liquibase.changelog - ChangeSet changelog/db/004-create-category-table.xml::004::admin ran successfully in 5ms
+2025-05-04 20:27:04 INFO  liquibase.ui - Running Changeset: changelog/db/005-insert-categories-test.xml::005::toi
+2025-05-04 20:27:04 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:04 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:04 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:04 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:04 INFO  liquibase.changelog - ChangeSet changelog/db/005-insert-categories-test.xml::005::toi ran successfully in 11ms
+2025-05-04 20:27:04 INFO  liquibase.util - UPDATE SUMMARY
+2025-05-04 20:27:04 INFO  liquibase.util - Run:                          5
+2025-05-04 20:27:04 INFO  liquibase.util - Previously run:               0
+2025-05-04 20:27:04 INFO  liquibase.util - Filtered out:                 0
+2025-05-04 20:27:04 INFO  liquibase.util - -------------------------------
+2025-05-04 20:27:04 INFO  liquibase.util - Total change sets:            5
+2025-05-04 20:27:04 INFO  liquibase.util - Update summary generated
+2025-05-04 20:27:04 INFO  liquibase.command - Update command completed successfully.
+2025-05-04 20:27:04 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 10
+2025-05-04 20:27:04 INFO  liquibase.lockservice - Successfully released change log lock
+2025-05-04 20:27:04 INFO  liquibase.command - Command execution complete
+2025-05-04 20:27:04 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 20:27:04 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-04 20:27:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-04 20:27:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 20:27:05 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+2025-05-04 20:27:05 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-04 20:27:05 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-04 20:27:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 20:27:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 20:27:09 TRACE o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {springSecurityConfig=be.ifapme.sab.config.security.SpringSecurityConfig$$SpringCGLIB$$0@6ea4b4b2}
+2025-05-04 20:27:09 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-04 20:27:09 DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-04 20:27:10 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-04 20:27:10 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
+2025-05-04 20:27:18 INFO  be.ifapme.sab.AristoteApplication - Starting AristoteApplication using Java 23 with PID 47720 (/Users/jessicazawistowska/Desktop/Travail SAB/sab/target/classes started by jessicazawistowska in /Users/jessicazawistowska/Desktop/Travail SAB/sab)
+2025-05-04 20:27:18 INFO  be.ifapme.sab.AristoteApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 20:27:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-04 20:27:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 7 JPA repository interfaces.
+2025-05-04 20:27:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-04 20:27:22 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-04 20:27:22 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 20:27:22 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 20:27:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 20:27:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4277 ms
+2025-05-04 20:27:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 20:27:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:userdb user=USER
+2025-05-04 20:27:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 20:27:24 INFO  liquibase.database - Set default schema name to PUBLIC
+2025-05-04 20:27:25 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:26 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:26 INFO  liquibase.lockservice - Successfully acquired change log lock
+2025-05-04 20:27:26 INFO  liquibase.command - Using deploymentId: 6383246468
+2025-05-04 20:27:26 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2025-05-04 20:27:26 INFO  liquibase.ui - Running Changeset: changelog/db/001-create-person-table.xml::001::admin
+2025-05-04 20:27:26 INFO  liquibase.changelog - Table person created
+2025-05-04 20:27:26 INFO  liquibase.changelog - ChangeSet changelog/db/001-create-person-table.xml::001::admin ran successfully in 21ms
+2025-05-04 20:27:26 INFO  liquibase.ui - Running Changeset: changelog/db/002-insert-admin-user.xml::002::toi
+2025-05-04 20:27:26 INFO  liquibase.changelog - New row inserted into person
+2025-05-04 20:27:26 INFO  liquibase.changelog - ChangeSet changelog/db/002-insert-admin-user.xml::002::toi ran successfully in 4ms
+2025-05-04 20:27:26 INFO  liquibase.ui - Running Changeset: changelog/db/003-create-book-table.xml::003::admin
+2025-05-04 20:27:26 INFO  liquibase.changelog - Table books created
+2025-05-04 20:27:26 INFO  liquibase.changelog - ChangeSet changelog/db/003-create-book-table.xml::003::admin ran successfully in 17ms
+2025-05-04 20:27:26 INFO  liquibase.ui - Running Changeset: changelog/db/004-create-category-table.xml::004::admin
+2025-05-04 20:27:26 INFO  liquibase.changelog - Table category created
+2025-05-04 20:27:26 INFO  liquibase.changelog - ChangeSet changelog/db/004-create-category-table.xml::004::admin ran successfully in 5ms
+2025-05-04 20:27:26 INFO  liquibase.ui - Running Changeset: changelog/db/005-insert-categories-test.xml::005::toi
+2025-05-04 20:27:26 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:26 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:26 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:26 INFO  liquibase.changelog - New row inserted into category
+2025-05-04 20:27:26 INFO  liquibase.changelog - ChangeSet changelog/db/005-insert-categories-test.xml::005::toi ran successfully in 17ms
+2025-05-04 20:27:26 INFO  liquibase.util - UPDATE SUMMARY
+2025-05-04 20:27:26 INFO  liquibase.util - Run:                          5
+2025-05-04 20:27:26 INFO  liquibase.util - Previously run:               0
+2025-05-04 20:27:26 INFO  liquibase.util - Filtered out:                 0
+2025-05-04 20:27:26 INFO  liquibase.util - -------------------------------
+2025-05-04 20:27:26 INFO  liquibase.util - Total change sets:            5
+2025-05-04 20:27:26 INFO  liquibase.util - Update summary generated
+2025-05-04 20:27:26 INFO  liquibase.command - Update command completed successfully.
+2025-05-04 20:27:26 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 10
+2025-05-04 20:27:26 INFO  liquibase.lockservice - Successfully released change log lock
+2025-05-04 20:27:26 INFO  liquibase.command - Command execution complete
+2025-05-04 20:27:26 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-04 20:27:27 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-04 20:27:27 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-04 20:27:28 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-04 20:27:28 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+2025-05-04 20:27:28 WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-04 20:27:28 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-04 20:27:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-04 20:27:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 20:27:32 TRACE o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {springSecurityConfig=be.ifapme.sab.config.security.SpringSecurityConfig$$SpringCGLIB$$0@20c7a91d}
+2025-05-04 20:27:32 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-04 20:27:33 DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-04 20:27:33 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-04 20:27:34 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
+2025-05-04 20:27:34 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-04 20:27:34 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-04 20:27:34 INFO  be.ifapme.sab.AristoteApplication - Started AristoteApplication in 17.745 seconds (process running for 19.958)
+2025-05-04 20:29:43 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-04 20:29:43 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-04 20:29:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-04 20:29:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 20:29:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

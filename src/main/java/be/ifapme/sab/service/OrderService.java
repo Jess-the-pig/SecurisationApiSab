@@ -12,6 +12,7 @@ import be.ifapme.sab.repository.OrderRepository;
 import be.ifapme.sab.repository.PaymentRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
@@ -23,15 +24,15 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class OrderService {
 
     private OrderRepository orderRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     @Transactional
     public Order convertCartToOrder(Cart cart, Payment payment) {
-        logger.info("Conversion du panier vers commande");
+        log.info("Conversion du panier vers commande");
         Order order = new Order();
         order.setPerson(cart.getUser());
         order.setPayment(payment);
@@ -58,13 +59,13 @@ public class OrderService {
     @Transactional
     public Order save(Order order) {
 
-        logger.info("Enregistrement de la commande");
+        log.info("Enregistrement de la commande");
         return orderRepository.save(order);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     public List<OrderResponse> getAllOrders(){
-        logger.info("Recherche des commandes");
+        log.info("Recherche des commandes");
         SecurityUtils.checkAdmin();
         List<Order> allOrderList = orderRepository.findAll();
 
