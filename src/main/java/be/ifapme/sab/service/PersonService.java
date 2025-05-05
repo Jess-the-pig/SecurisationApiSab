@@ -9,6 +9,7 @@ import be.ifapme.sab.repository.PersonRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -27,6 +28,7 @@ public class PersonService {
 
     private PasswordEncoder passwordEncoder;
 
+
     public void registerUser(PersonRequest personInput){
         log.info("Enregistrement utilisateur");
         String username = personInput.getUsername();
@@ -35,9 +37,9 @@ public class PersonService {
             user.setUsername(username);
             user.setPassword(passwordEncoder.encode(personInput.getPassword()));
             user.setRole(UserRole.USER);
-
             personRepository.save(user);
         }
+
     }
 
     public void createAdmin(PersonRequest personInput){
@@ -56,5 +58,21 @@ public class PersonService {
         Person person = personRepository.findByUsername(email)
             .orElseThrow(() -> new UsernameNotFoundException("Utilisateur non trouvé"));
         return new PersonResponse(person.getUsername(),person.getRole());
+    }
+
+    @PreAuthorize("hasRole('USER')")
+    public PersonResponse getthisuserInfo(){
+        log.debug("Recherche de l'information utilisateur");
+        SecurityUtils.checkUser();
+
+        // Récupère le nom d'utilisateur à partir du token JWT
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName(); // souvent l'email ou le sub du token
+
+        // Vérifie l'utilisateur
+        Person person = personRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Utilisateur non trouvé"));
+
+        return new PersonResponse(person.getUsername(), person.getRole());
     }
 }
