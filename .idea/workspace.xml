@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keystore.p12" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/keystore.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Aristote.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Aristote.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +68,8 @@
       <recent name="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/changelog/db" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/changelog/db" />
       <recent name="$PROJECT_DIR$/src/main/resources/config/db/changelog" />
       <recent name="$PROJECT_DIR$/src/main/java/db/changelog" />
       <recent name="$PROJECT_DIR$/src/main/resources/config/liquibase/db/changelog" />

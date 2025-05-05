@@ -2636,3 +2636,215 @@ org.springframework.security.authentication.BadCredentialsException: Les identif
 2025-05-05T16:11:00.735+02:00  INFO 50718 --- [aristote] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
 2025-05-05T16:11:00.874+02:00  INFO 50718 --- [aristote] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-05T16:11:00.891+02:00  INFO 50718 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : Started AristoteApplication in 13.464 seconds (process running for 14.472)
+2025-05-05T16:14:26.428+02:00  INFO 50718 --- [aristote] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-05T16:14:26.441+02:00  INFO 50718 --- [aristote] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-05T16:14:26.453+02:00  INFO 50718 --- [aristote] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-05T16:14:26.461+02:00  INFO 50718 --- [aristote] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-05T16:14:26.468+02:00  INFO 50718 --- [aristote] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-05T16:15:27.848+02:00  INFO 50893 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : Starting AristoteApplication using Java 23 with PID 50893 (/Users/jessicazawistowska/Desktop/Travail SAB/sab/target/classes started by jessicazawistowska in /Users/jessicazawistowska/Desktop/Travail SAB/sab)
+2025-05-05T16:15:27.852+02:00  INFO 50893 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-05T16:15:29.895+02:00  INFO 50893 --- [aristote] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-05T16:15:30.062+02:00  INFO 50893 --- [aristote] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 7 JPA repository interfaces.
+2025-05-05T16:15:31.357+02:00  INFO 50893 --- [aristote] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8443 (https)
+2025-05-05T16:15:31.401+02:00  INFO 50893 --- [aristote] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-05T16:15:31.401+02:00  INFO 50893 --- [aristote] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-05T16:15:31.593+02:00  INFO 50893 --- [aristote] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-05T16:15:31.595+02:00  INFO 50893 --- [aristote] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3597 ms
+2025-05-05T16:15:32.068+02:00  INFO 50893 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-05T16:15:32.690+02:00  INFO 50893 --- [aristote] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:userdb user=USER
+2025-05-05T16:15:32.695+02:00  INFO 50893 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-05T16:15:32.857+02:00  INFO 50893 --- [aristote] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-05-05T16:15:33.734+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-05-05T16:15:34.127+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-05-05T16:15:34.305+02:00  INFO 50893 --- [aristote] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-05-05T16:15:34.308+02:00  INFO 50893 --- [aristote] [main] liquibase.command                        : Using deploymentId: 6454534308
+2025-05-05T16:15:34.313+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-05-05T16:15:34.405+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/001-create-person-table.xml::001::admin
+2025-05-05T16:15:34.422+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Table person created
+2025-05-05T16:15:34.424+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/001-create-person-table.xml::001::admin ran successfully in 17ms
+2025-05-05T16:15:34.439+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/002-insert-admin-user.xml::002::toi
+2025-05-05T16:15:34.444+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : New row inserted into person
+2025-05-05T16:15:34.445+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/002-insert-admin-user.xml::002::toi ran successfully in 5ms
+2025-05-05T16:15:34.455+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/003-create-book-table.xml::003::admin
+2025-05-05T16:15:34.470+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Table books created
+2025-05-05T16:15:34.471+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/003-create-book-table.xml::003::admin ran successfully in 15ms
+2025-05-05T16:15:34.481+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/004-create-category-table.xml::004::admin
+2025-05-05T16:15:34.487+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : Table category created
+2025-05-05T16:15:34.490+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/004-create-category-table.xml::004::admin ran successfully in 7ms
+2025-05-05T16:15:34.500+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/005-insert-categories-test.xml::005::toi
+2025-05-05T16:15:34.504+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:15:34.508+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:15:34.511+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:15:34.513+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:15:34.514+02:00  INFO 50893 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/005-insert-categories-test.xml::005::toi ran successfully in 13ms
+2025-05-05T16:15:34.530+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : UPDATE SUMMARY
+2025-05-05T16:15:34.531+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : Run:                          5
+2025-05-05T16:15:34.531+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : Previously run:               0
+2025-05-05T16:15:34.531+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : Filtered out:                 0
+2025-05-05T16:15:34.532+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : -------------------------------
+2025-05-05T16:15:34.532+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : Total change sets:            5
+2025-05-05T16:15:34.534+02:00  INFO 50893 --- [aristote] [main] liquibase.util                           : Update summary generated
+2025-05-05T16:15:34.539+02:00  INFO 50893 --- [aristote] [main] liquibase.command                        : Update command completed successfully.
+2025-05-05T16:15:34.540+02:00  INFO 50893 --- [aristote] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 10
+2025-05-05T16:15:34.543+02:00  INFO 50893 --- [aristote] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-05-05T16:15:34.544+02:00  INFO 50893 --- [aristote] [main] liquibase.command                        : Command execution complete
+2025-05-05T16:15:34.811+02:00  INFO 50893 --- [aristote] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-05T16:15:34.975+02:00  INFO 50893 --- [aristote] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-05T16:15:35.079+02:00  INFO 50893 --- [aristote] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-05T16:15:35.770+02:00  INFO 50893 --- [aristote] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-05T16:15:35.807+02:00  WARN 50893 --- [aristote] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+2025-05-05T16:15:35.857+02:00  WARN 50893 --- [aristote] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-05T16:15:35.898+02:00  INFO 50893 --- [aristote] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-05T16:15:38.184+02:00  INFO 50893 --- [aristote] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-05T16:15:38.192+02:00  INFO 50893 --- [aristote] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-05T16:15:39.633+02:00 TRACE 50893 --- [aristote] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {springSecurityConfig=be.ifapme.sab.config.security.SpringSecurityConfig$$SpringCGLIB$$0@17e7cc67}
+2025-05-05T16:15:39.656+02:00  INFO 50893 --- [aristote] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-05T16:15:40.586+02:00 DEBUG 50893 --- [aristote] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BearerTokenAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-05T16:15:40.691+02:00  INFO 50893 --- [aristote] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-05T16:15:41.130+02:00  INFO 50893 --- [aristote] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
+2025-05-05T16:15:41.677+02:00  WARN 50893 --- [aristote] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-05T16:15:41.681+02:00  INFO 50893 --- [aristote] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-05T16:15:41.685+02:00  INFO 50893 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-05T16:15:41.699+02:00  INFO 50893 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-05T16:15:41.722+02:00  INFO 50893 --- [aristote] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-05T16:15:41.755+02:00 ERROR 50893 --- [aristote] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:326) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:510) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:295) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:240) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at be.ifapme.sab.AristoteApplication.main(AristoteApplication.java:13) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:251) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:44) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:323) ~[spring-context-6.2.5.jar:6.2.5]
+	... 13 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:222) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:310) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:236) ~[spring-boot-3.4.4.jar:3.4.4]
+	... 15 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1082) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:219) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	... 17 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Get Key failed: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:114) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.initialiseSsl(AbstractJsseEndpoint.java:70) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:199) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1304) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1390) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:644) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1079) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	... 19 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: Get Key failed: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.internalGetKey(PKCS12KeyStore.java:458) ~[na:na]
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineGetKey(PKCS12KeyStore.java:300) ~[na:na]
+	at java.base/sun.security.util.KeyStoreDelegator.engineGetKey(KeyStoreDelegator.java:93) ~[na:na]
+	at java.base/java.security.KeyStore.getKey(KeyStore.java:1074) ~[na:na]
+	at org.apache.tomcat.util.net.SSLUtilBase.getKeyManagers(SSLUtilBase.java:393) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SSLUtilBase.createSSLContext(SSLUtilBase.java:268) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.createSSLContext(AbstractJsseEndpoint.java:112) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	... 25 common frames omitted
+Caused by: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/com.sun.crypto.provider.CipherCore.unpad(CipherCore.java:861) ~[na:na]
+	at java.base/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:941) ~[na:na]
+	at java.base/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:734) ~[na:na]
+	at java.base/com.sun.crypto.provider.PBES2Core.engineDoFinal(PBES2Core.java:203) ~[na:na]
+	at java.base/javax.crypto.Cipher.doFinal(Cipher.java:2251) ~[na:na]
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.lambda$internalGetKey$0(PKCS12KeyStore.java:374) ~[na:na]
+	at java.base/sun.security.pkcs12.PKCS12KeyStore$RetryWithZero.run(PKCS12KeyStore.java:264) ~[na:na]
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.internalGetKey(PKCS12KeyStore.java:365) ~[na:na]
+	... 31 common frames omitted
+
+2025-05-05T16:19:37.799+02:00  INFO 50983 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : Starting AristoteApplication using Java 23 with PID 50983 (/Users/jessicazawistowska/Desktop/Travail SAB/sab/target/classes started by jessicazawistowska in /Users/jessicazawistowska/Desktop/Travail SAB/sab)
+2025-05-05T16:19:37.805+02:00  INFO 50983 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-05T16:19:39.981+02:00  INFO 50983 --- [aristote] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-05T16:19:40.153+02:00  INFO 50983 --- [aristote] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 7 JPA repository interfaces.
+2025-05-05T16:19:41.715+02:00  INFO 50983 --- [aristote] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8443 (https)
+2025-05-05T16:19:41.760+02:00  INFO 50983 --- [aristote] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-05T16:19:41.760+02:00  INFO 50983 --- [aristote] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-05T16:19:41.907+02:00  INFO 50983 --- [aristote] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-05T16:19:41.908+02:00  INFO 50983 --- [aristote] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3944 ms
+2025-05-05T16:19:42.285+02:00  INFO 50983 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-05T16:19:43.053+02:00  INFO 50983 --- [aristote] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:userdb user=USER
+2025-05-05T16:19:43.060+02:00  INFO 50983 --- [aristote] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-05T16:19:43.259+02:00  INFO 50983 --- [aristote] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-05-05T16:19:44.195+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-05-05T16:19:44.355+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-05-05T16:19:44.495+02:00  INFO 50983 --- [aristote] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-05-05T16:19:44.497+02:00  INFO 50983 --- [aristote] [main] liquibase.command                        : Using deploymentId: 6454784496
+2025-05-05T16:19:44.501+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-05-05T16:19:44.543+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/001-create-person-table.xml::001::admin
+2025-05-05T16:19:44.558+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Table person created
+2025-05-05T16:19:44.560+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/001-create-person-table.xml::001::admin ran successfully in 15ms
+2025-05-05T16:19:44.573+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/002-insert-admin-user.xml::002::toi
+2025-05-05T16:19:44.575+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : New row inserted into person
+2025-05-05T16:19:44.576+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/002-insert-admin-user.xml::002::toi ran successfully in 3ms
+2025-05-05T16:19:44.586+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/003-create-book-table.xml::003::admin
+2025-05-05T16:19:44.593+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Table books created
+2025-05-05T16:19:44.594+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/003-create-book-table.xml::003::admin ran successfully in 8ms
+2025-05-05T16:19:44.601+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/004-create-category-table.xml::004::admin
+2025-05-05T16:19:44.610+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : Table category created
+2025-05-05T16:19:44.611+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/004-create-category-table.xml::004::admin ran successfully in 9ms
+2025-05-05T16:19:44.621+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Running Changeset: changelog/db/005-insert-categories-test.xml::005::toi
+2025-05-05T16:19:44.623+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:19:44.625+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:19:44.629+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:19:44.631+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : New row inserted into category
+2025-05-05T16:19:44.632+02:00  INFO 50983 --- [aristote] [main] liquibase.changelog                      : ChangeSet changelog/db/005-insert-categories-test.xml::005::toi ran successfully in 11ms
+2025-05-05T16:19:44.645+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : UPDATE SUMMARY
+2025-05-05T16:19:44.646+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : Run:                          5
+2025-05-05T16:19:44.646+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : Previously run:               0
+2025-05-05T16:19:44.647+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : Filtered out:                 0
+2025-05-05T16:19:44.647+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : -------------------------------
+2025-05-05T16:19:44.647+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : Total change sets:            5
+2025-05-05T16:19:44.649+02:00  INFO 50983 --- [aristote] [main] liquibase.util                           : Update summary generated
+2025-05-05T16:19:44.655+02:00  INFO 50983 --- [aristote] [main] liquibase.command                        : Update command completed successfully.
+2025-05-05T16:19:44.655+02:00  INFO 50983 --- [aristote] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 10
+2025-05-05T16:19:44.658+02:00  INFO 50983 --- [aristote] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-05-05T16:19:44.660+02:00  INFO 50983 --- [aristote] [main] liquibase.command                        : Command execution complete
+2025-05-05T16:19:44.908+02:00  INFO 50983 --- [aristote] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-05T16:19:45.068+02:00  INFO 50983 --- [aristote] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-05T16:19:45.176+02:00  INFO 50983 --- [aristote] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-05T16:19:45.878+02:00  INFO 50983 --- [aristote] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-05T16:19:45.911+02:00  WARN 50983 --- [aristote] [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead
+2025-05-05T16:19:45.985+02:00  WARN 50983 --- [aristote] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-05T16:19:46.017+02:00  INFO 50983 --- [aristote] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-05T16:19:48.301+02:00  INFO 50983 --- [aristote] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-05T16:19:48.308+02:00  INFO 50983 --- [aristote] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-05T16:19:49.729+02:00 TRACE 50983 --- [aristote] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {springSecurityConfig=be.ifapme.sab.config.security.SpringSecurityConfig$$SpringCGLIB$$0@13482361}
+2025-05-05T16:19:49.750+02:00  INFO 50983 --- [aristote] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-05T16:19:50.625+02:00 DEBUG 50983 --- [aristote] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BearerTokenAuthenticationFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-05T16:19:50.735+02:00  INFO 50983 --- [aristote] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-05T16:19:51.174+02:00  INFO 50983 --- [aristote] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:userdb'
+2025-05-05T16:19:51.793+02:00  INFO 50983 --- [aristote] [main] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/jessicazawistowska/.keystore] using alias [monAlias] with trust store [null]
+2025-05-05T16:19:51.810+02:00  INFO 50983 --- [aristote] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8443 (https) with context path '/'
+2025-05-05T16:19:51.829+02:00  INFO 50983 --- [aristote] [main] be.ifapme.sab.AristoteApplication        : Started AristoteApplication in 15.518 seconds (process running for 16.76)
