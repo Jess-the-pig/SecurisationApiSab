@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/OAuth2LoginSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/RsaKeyProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/Aristote.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Aristote.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/mon-application.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/AristoteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/AristoteApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logs/Aristote.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/logs/Aristote.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/AristoteApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/AristoteApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/api/controller/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/config/security/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/be/ifapme/sab/service/PersonService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
