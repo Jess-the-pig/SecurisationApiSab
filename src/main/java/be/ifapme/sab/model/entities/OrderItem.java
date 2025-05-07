@@ -3,8 +3,6 @@ package be.ifapme.sab.model.entities;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class OrderItem {

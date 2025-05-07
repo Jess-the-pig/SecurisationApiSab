@@ -1,6 +1,5 @@
 package be.ifapme.sab.api.DTO;
 
-import be.ifapme.sab.model.entities.Person;
 import be.ifapme.sab.model.entities.enums.UserRole;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

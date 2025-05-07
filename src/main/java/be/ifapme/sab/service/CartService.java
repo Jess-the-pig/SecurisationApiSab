@@ -17,8 +17,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -40,7 +38,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public List<CartItemResponse> seeAllItems(CartRequest cartRequest){
-        log.info("Recherche des livres du panier");
+        log.debug("Recherche des livres du panier");
         SecurityUtils.checkUser();
         Long cartId = cartRequest.getCart_id();
 
@@ -61,7 +59,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public CartResponse createCart(UserDetails userDetails) {
-        log.info("Creation du panier");
+        log.debug("Creation du panier");
         SecurityUtils.checkUser();
         Optional<Person> user = personRepository.findByUsername(userDetails.getUsername());
         if (user.isPresent()) {
@@ -78,7 +76,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public void storeItem(BookRequest bookRequest){
-        log.info("Insertion du produit");
+        log.debug("Insertion du produit");
         SecurityUtils.checkUser();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
@@ -102,7 +100,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<CartItemResponse> seeIteminCart(Long itemid, CustomUserDetails userDetails){
-        log.info("Recherche de l'item dans le panier");
+        log.debug("Recherche de l'item dans le panier");
         SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
@@ -129,7 +127,7 @@ public class CartService {
 
     @PreAuthorize("hasRole('USER')")
     public void deleteItemFromCart(Long itemid, CustomUserDetails userDetails){
-        log.info("Supression de l'item du panier");
+        log.debug("Supression de l'item du panier");
         SecurityUtils.checkUser();
         Person user = userDetails.getPerson();
 
@@ -152,7 +150,7 @@ public class CartService {
     @Transactional
     @PreAuthorize("hasRole('USER')")
     public ResponseEntity<?> processPayementandMakeOrder(Long cartId){
-        log.info("Payment en cours");
+        log.debug("Payment en cours");
         SecurityUtils.checkUser();
         Cart cart = cartRepository.findById(cartId)
                 .orElseThrow(() -> new EntityNotFoundException("Panier non trouvé"));

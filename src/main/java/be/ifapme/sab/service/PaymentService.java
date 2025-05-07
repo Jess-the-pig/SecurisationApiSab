@@ -4,8 +4,6 @@ import be.ifapme.sab.model.entities.Cart;
 import be.ifapme.sab.model.entities.Payment;
 import be.ifapme.sab.model.entities.enums.PaymentStatus;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class PaymentService {
 
     public Payment processPayment(Cart cart){
-        log.info("Payememnt en cours");
+        log.debug("Payememnt en cours");
         Payment payment = new Payment();
         payment.setAmount(cart.calculateTotalAmount());
         payment.setStatus(PaymentStatus.SUCCESS);

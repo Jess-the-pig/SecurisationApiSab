@@ -1,7 +1,6 @@
 package be.ifapme.sab.model.entities;
 
 import be.ifapme.sab.model.entities.enums.CartStatus;
-import be.ifapme.sab.model.entities.enums.OrderStatus;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

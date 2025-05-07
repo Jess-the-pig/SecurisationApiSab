@@ -14,10 +14,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -30,7 +26,7 @@ public class PersonService {
 
 
     public void registerUser(PersonRequest personInput){
-        log.info("Enregistrement utilisateur");
+        log.debug("Enregistrement utilisateur");
         String username = personInput.getUsername();
         if(username != null && !personRepository.existsByUsername(username)){
             Person user = new Person();
@@ -43,7 +39,7 @@ public class PersonService {
     }
 
     public void createAdmin(PersonRequest personInput){
-        log.info("Creation d'un admin");
+        log.debug("Creation d'un admin");
         String username = personInput.getUsername();
 
         if(username != null && personRepository.existsByUsername(username)){
@@ -53,7 +49,7 @@ public class PersonService {
 
     @PreAuthorize("hasRole('ADMIN')")
     public PersonResponse getuserInfo(String email){
-        log.info("Recherche le l'information utilisateur");
+        log.debug("Recherche le l'information utilisateur");
         SecurityUtils.checkAdmin();
         Person person = personRepository.findByUsername(email)
             .orElseThrow(() -> new UsernameNotFoundException("Utilisateur non trouvé"));

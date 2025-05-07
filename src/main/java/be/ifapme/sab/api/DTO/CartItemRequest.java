@@ -2,10 +2,6 @@ package be.ifapme.sab.api.DTO;
 
 import be.ifapme.sab.model.entities.Book;
 import be.ifapme.sab.model.entities.Cart;
-import jakarta.persistence.Column;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 

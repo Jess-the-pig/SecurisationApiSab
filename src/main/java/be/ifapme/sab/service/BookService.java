@@ -9,8 +9,6 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +25,7 @@ public class BookService {
 
     //Rechercher tous les livres.
     public List<BookResponse> getAllBooks(){
-        log.info("Recherche des livres");
+        log.debug("Recherche des livres");
         List<Book> booklist = bookRepository.findAll();
         return booklist.stream()
                 .map(book -> new BookResponse(
@@ -45,7 +43,7 @@ public class BookService {
     //Enregistrer un livre.
     @PreAuthorize("hasRole('ADMIN')")
     public BookResponse store(BookRequest bookrequest){
-        log.info("Insertion de livre");
+        log.debug("Insertion de livre");
         SecurityUtils.checkAdmin();
 
         Book book = new Book();
@@ -63,7 +61,7 @@ public class BookService {
 
     //Find by id
     public BookResponse getBookbyId(Long id){
-        log.info("Recherche du livre");
+        log.debug("Recherche du livre");
         Optional<Book> bookOptional = bookRepository.findById(id);
         if(bookOptional.isPresent()){
             Book book = bookOptional.get();

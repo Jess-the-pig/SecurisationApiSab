@@ -5,10 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac47feb2-48a8-487c-b433-7dd560af16c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/keystore.p12" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/keystore.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/exceptions/TooManyRequestsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/utils/BandwidthLimiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/Aristote.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Aristote.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/CartItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OAuthPersonResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/DTO/PersonResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/controller/UserOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/api/logs/Aristote.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/config/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/model/entities/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/CartItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/CartItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/OAuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/OAuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/ifapme/sab/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +67,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AristoteApplication.executor": "Run",
-    "JUnit.AristoteApplicationTests.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "WIP",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jessicazawistowska/Desktop/Travail SAB/sab/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AristoteApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AristoteApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;WIP&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jessicazawistowska/Desktop/Travail SAB/sab/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
